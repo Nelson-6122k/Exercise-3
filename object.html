@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body style="background-image: url(bg_car.jpeg); background-size: cover; font-size: large">
+<script>
+    var kia_car = {name:"Kia", model:"Sonet", color:"Black", price: 1150000};
+    var hundai_car = {name:"Hundai", model:"i20", color:"Blue", price: 700000};
+    function kia() {
+        document.getElementById("name").innerHTML = kia_car.name;
+        document.getElementById("model").innerHTML = kia_car.model;
+        document.getElementById("color").innerHTML = kia_car.color;
+        document.getElementById("price").innerHTML = kia_car.price;
+    }
+    function hundai() {
+        document.getElementById("name").innerHTML = hundai_car.name;
+        document.getElementById("model").innerHTML = hundai_car.model;
+        document.getElementById("color").innerHTML = hundai_car.color;
+        document.getElementById("price").innerHTML = hundai_car.price;
+    }
+    function bigImg(x) {
+        x.style.height = "220px";
+        x.style.width = "220px";
+    }
+    function normalImg(x) {
+        x.style.height = "200px";
+        x.style.width = "200px";
+    }
+</script>
+<center>
+    <h1>Car Sales</h1>
+    <button onclick="kia()"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="kia_sonet.jpeg" height="200" width="200"></button>
+    <button onclick="hundai()"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="hundai_i20.jpeg" height="200" width="200"></button>
+    <br><br><table border="1" cellpadding="10">
+        <tr>
+            <td>Car Name</td>
+            <td><label id="name"></label></td>
+        </tr>
+    <tr>
+        <td>Car Model</td>
+        <td><label id="model"></label></td>
+    </tr>
+    <tr>
+        <td>Car Color</td>
+        <td><label id="color"></label></td>
+    </tr>
+    <tr>
+        <td>Car price</td>
+        <td><label id="price"></label></td>
+    </tr>
+    
+    </table>
+    
+</center>
+</body>
+</html>
